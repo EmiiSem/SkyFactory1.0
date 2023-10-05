@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет SkyFactory</title>
+    <link rel="stylesheet" href="CSS/personal_account_page.css">
+    <link rel="stylesheet" href="CSS/home_page.css">
+    <link rel="stylesheet" href="CSS/catalog_page.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/personal_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Шапка сайта
+    -->
+    <header class="header col-12">
+        <div class="navbar container">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--
+                        Бургер меню (выпадающее меню)
+                    -->
+                    <li class="nav__item">
+                        <button class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <p class="text__menu">Меню</p>
+                                <span></span>
+                            </label>
+                            
+                            <ul class="menu__box">
+                              <li><a class="menu__item" href="Main_page.html">Главная</a></li>
+                              <li><a class="menu__item" href="Catalog_page.html">Каталог товаров</a></li>
+                              <li><a class="menu__item" href="Reviews_page.html">Отзывы</a></li>
+                              <li><a class="menu__item" href="Contact_page.html">Контакты</a></li>
+                              <li><a class="menu__item" href="About__page.html">О SkyFactory</a></li>
+                            </ul>
+                        </button>
+                    </li>
+
+                    <li class="nav__item"><a href="#" class="nav__link">
+                        <div class="form__search">
+                            <form action="#" method="get">
+                                <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value="" autocomplete="off">
+                            </form>
+                        </div>
+                    </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/account.svg" alt="">
+                        <a href="Personal_accout_page.html" class="nav__link">Личный кабинет</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/shopping_cart.svg" alt="">
+                        <a href="#" class="nav__link">Корзина</a>
+                    </li>
+
+                </ul>
+            </nav>
+            
+        </div>
+        <!-- /.navbar -->
+    </header>
+    <!-- /.header -->
+
+    <!--
+        Основной раздел сайта
+    -->
+    <div class="main">
+        <div class="page container">
+
+            <div class="subpage_nav">
+                <ul class="breadcrumb-nav">
+                    <li><a href="Main_page.html" title="Главная">
+                        <span>Главная</span>
+                    </a></li>
+                    <li><a href="Personal_accout_page.html" title="Персональный раздел">
+                        <span>Персональный раздел</span>
+                    </a></li>
+                    <li><a href="#" title="Профиль пользователя" class="last__nav">
+                        <span>Профиль пользователя</span>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- ./subpage_nav -->
+
+            <h1 class="page__title">Профиль пользователя</h1>
+
+            <div class="container personal-lk">
+                <div class="content-right">
+                    <div class="menu">
+                        <ul class="menu__list list">
+
+                            <li class="menu__item">
+                                <a href="Personal_accout_page.html" class="menu__link link-sub-1">Общая информация</a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a href="Personal_accout_page_dop.html" class="menu__link link-sub-1">Персональная информация</a>
+                            </li>
+
+                            <li class="menu__item">
+                                <a href="Basket_page.html" class="menu__link link-sub-1">Список заказов</a>
+                            </li>
+
+                            <li class="menu__item menu__item-unlock">
+                                <a href="Main_page.html">Выйти</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- ./right -->
+
+                <div class="content_left">
+                    <h1 class="personal-lk__name">Персональная информация</h1>
+
+                    <div class="personal-lk__tool">
+                        Здесь вы можете отредактировать информацию о себе
+                        <br>
+                        и добавить недостающую
+                    </div>
+                    <!-- ./tool -->
+
+                    <div class="general-info">
+                        <p>
+                            <strong>Имя</strong>
+                            <input type="text" name="name" value="">
+                        </p>
+                        <p>
+                            <strong>Фамилия</strong>
+                            <input type="text" name="surname" value="">
+                        </p>
+                        <p>
+                            <strong>E-mail</strong>
+                            <input type="email" name="E-mail" value="">
+                        </p>
+                    </div>
+
+                    <h1 class="personal-lk__name">Новый пароль</h1>
+
+                    <div class="general-info1">
+                        <p>
+                            <strong>Пароль</strong>
+                            <input type="password" name="password value="">
+                        </p>
+                        <p>
+                            <strong>Повторите пароль</strong>
+                            <input type="password" name="password" value="">
+                        </p>
+                    </div>
+
+                    <div class="personal-form__grid">
+                        <button class="personal-form__button btn-lg btn-base-brand-1" id="#buttonForm" type="submit" onclick="clickButtonSave()">Сохранить</button>
+                        <a href="#" class="personal-form__button personal-form__cancel">Отменить</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ./personal-lk -->
+        </div>
+    </div>
+    <!-- ./main -->
+
+    <!--
+        Подвал сайта
+    -->
+    <footer class="footer4 col-12">
+        <div class="container navbar">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <a href="Main_page.html" class="logo-link1">
+                <p class="logo__text">SkyFactory</p>
+            </a>
+            <!-- <p class="logo__text">SkyFactory</p> -->
+
+            <div class="footer__section4">         
+                <div class="footer-column4">Популярные разделы</div>
+                <ul class="list-unstyled4 simple-list4">
+                    <li><a href="#" class="footer_link4">Телескопы Sky-Watcher</a></li>
+                    <li><a href="#" class="footer_link4">Телескоп рефлектор (зеркальные)</a></li>
+                </ul>
+            </div>
+            <div class="footer__section4">         
+                <div class="footer-column4">Контакты интернет-магазина</div>
+                <ul class="list-unstyled4 simple-list4">
+                    <li><a href="#" class="footer_link4">+7(999) 887 37 50</a></li>
+                    <li><a href="#" class="footer_link4">8(999) 887 37 50</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ./footer -->
+
+    <script src="JS/main.js"></script>
+</body>
+</html>

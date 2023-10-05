@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="CSS/basket_page.css">
+    <link rel="stylesheet" href="CSS/home_page.css">
+    <link rel="stylesheet" href="CSS/catalog_page.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/personal_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Шапка сайта
+    -->
+    <header class="header col-12">
+        <div class="navbar container">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--
+                        Бургер меню (выпадающее меню)
+                    -->
+                    <li class="nav__item">
+                        <button class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <p class="text__menu">Меню</p>
+                                <span></span>
+                            </label>
+                            
+                            <ul class="menu__box">
+                              <li><a class="menu__item" href="Main_page.html">Главная</a></li>
+                              <li><a class="menu__item" href="Catalog_page.html">Каталог товаров</a></li>
+                              <li><a class="menu__item" href="Reviews_page.html">Отзывы</a></li>
+                              <li><a class="menu__item" href="Contact_page.html">Контакты</a></li>
+                              <li><a class="menu__item" href="About__page.html">О SkyFactory</a></li>
+                            </ul>
+                        </button>
+                    </li>
+
+                    <li class="nav__item"><a href="#" class="nav__link">
+                        <div class="form__search">
+                            <form action="#" method="get">
+                                <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value="" autocomplete="off">
+                            </form>
+                        </div>
+                    </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/account.svg" alt="">
+                        <a href="Personal_accout_page.html" class="nav__link">Личный кабинет</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/shopping_cart.svg" alt="">
+                        <a href="#" class="nav__link">Корзина</a>
+                    </li>
+
+                </ul>
+            </nav>
+            
+        </div>
+        <!-- /.navbar -->
+    </header>
+    <!-- /.header -->
+
+    <!--
+        Основной раздел сайта
+    -->
+    <div class="main">
+        <div class="page container">
+
+            <div class="subpage_nav">
+                <ul class="breadcrumb-nav">
+                    <li><a href="Main_page.html" title="Главная">
+                        <span>Главная</span>
+                    </a></li>
+                    <li><a href="#" title="Корзина" class="last__nav">
+                        <span>Корзина</span>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- ./subpage_nav -->
+
+            <h1 class="page__title">Корзина</h1>
+
+            <div id="basket-main" class="basket container">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="basket__cart">
+                            <div class="basket__cart-amount">1 товар</div>
+                            <span class="basket__cart-clear">Очистить всё</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- ./row -->
+
+                <div class="row">
+                    <div class="col-8 col-xl-9">
+                        <div class="basket__cart-item basket__cart-list">
+                            <div class="basket__items-block">
+                                <div class="basket__items-block-descriptions">
+                                    <div class="basket__items-block-inner">
+                                        <div class="basket__items-block-img">
+                                            <a href="#" class="basket__item-link">
+                                                <img src="img/Products/cart7.jpg" class="basket__item-img" alt="Телескоп Sky-Wather BK 707AZ2">
+                                            </a>
+                                        </div>
+                                        <!-- ./image -->
+                                        <div class="basket__item-info">
+                                            <h2 class="basket__item-info-text">
+                                                <a href="#" class="basket__item-info-link">
+                                                    <span>Телескоп Sky-Watcher BK 707AZ2</span>
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <!-- ./info -->
+                                    </div>
+                                    <!-- ./block-inner -->
+
+                                    <div class="basket__items-sum">
+                                        <div class="amount-basket">
+                                            <div class="basket-amout-item">
+                                                <span class="basket-btn"></span>
+                                                <div class="item-block">
+                                                    <input type="text" class="basket-filed" value="1">
+                                                </div>
+                                                <span class="basket-btn minus"></span>
+                                            </div>
+                                        </div>
+                                        <!-- ./amount -->
+
+                                        <div class="block__remove">
+                                            <div class="block__actions">
+                                                <span class="actions__remove icon-remove">Удалить</span>
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- ./remove-block -->
+
+                                        <div class="basket-price">
+                                            <div class="price-current">
+                                                <span class="price-text">26 590 руб.</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./col-8 -->
+
+                    <div class="col-4 col-xl-3">
+                        <div class="total-block">
+                            <div class="total-container">
+                                <div class="total-section">
+                                    <div class="total-section-deep">
+                                        <div class="total-block-deep total-price">
+                                            <div class="price-deep">
+                                                <div class="price-text-deep">Итого</div>
+                                                <div class="price-text-total">26 590 руб.</div>
+                                            </div>
+                                            <!-- ./price-deep -->
+                                        </div>
+                                        <!-- ./total-price -->
+                                    </div>
+                                </div>
+                                <!-- ./total-section -->
+                            </div>
+                            <!-- ./total-container -->
+
+                            <div class="basket-block">
+                                <button class="basket-button btn-width-full btn-base-brand-1 btn-lg btn-text-size-lg">Перейти к оформлению</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./row -->
+            </div>
+            <!-- ./basket -->
+        </div>
+    </div>
+    <!-- ./main -->
+
+    <!--
+        Подвал сайта
+    -->
+    <footer class="footer4 col-12">
+        <div class="container navbar">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <a href="Main_page.html" class="logo-link1">
+                <p class="logo__text">SkyFactory</p>
+            </a>
+            <!-- <p class="logo__text">SkyFactory</p> -->
+
+            <div class="footer__section4">         
+                <div class="footer-column4">Популярные разделы</div>
+                <ul class="list-unstyled4 simple-list4">
+                    <li><a href="#" class="footer_link4">Телескопы Sky-Watcher</a></li>
+                    <li><a href="#" class="footer_link4">Телескоп рефлектор (зеркальные)</a></li>
+                </ul>
+            </div>
+            <div class="footer__section4">         
+                <div class="footer-column4">Контакты интернет-магазина</div>
+                <ul class="list-unstyled4 simple-list4">
+                    <li><a href="#" class="footer_link4">+7(999) 887 37 50</a></li>
+                    <li><a href="#" class="footer_link4">8(999) 887 37 50</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ./footer -->
+
+    <script src="JS/main.js"></script>
+</body>
+</html>

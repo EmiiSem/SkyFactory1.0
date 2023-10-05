@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров SkyFactory</title>
+    <link rel="stylesheet" href="CSS/catalog_page.css">
+    <link rel="stylesheet" href="CSS/home_page.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/personal_page.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Шапка сайта
+    -->
+    <header class="header col-12">
+        <div class="navbar container">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--
+                        Бургер меню (выпадающее меню)
+                    -->
+                    <li class="nav__item">
+                        <button class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <p class="text__menu">Меню</p>
+                                <span></span>
+                            </label>
+                            
+                            <ul class="menu__box">
+                              <li><a class="menu__item" href="Main_page.html">Главная</a></li>
+                              <li><a class="menu__item" href="Catalog_page.html">Каталог товаров</a></li>
+                              <li><a class="menu__item" href="Reviews_page.html">Отзывы</a></li>
+                              <li><a class="menu__item" href="Contact_page.html">Контакты</a></li>
+                              <li><a class="menu__item" href="About__page.html">О SkyFactory</a></li>
+                            </ul>
+                        </button>
+                    </li>
+
+                    <li class="nav__item"><a href="#" class="nav__link">
+                        <div class="form__search">
+                            <form action="#" method="get">
+                                <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value="" autocomplete="off">
+                            </form>
+                        </div>
+                    </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/account.svg" alt="">
+                        <a href="#openModal" class="nav__link">Личный кабинет</a>
+
+                        <!-- Модальное окно -->
+                        <div class="modalDialog" id="openModal">
+                            <div class="container">
+                                <a href="#close" title="Закрыть" class="close">X</a>
+                                <div class="modal-author">
+
+                                    <div class="modal-aside">
+                                        <span class="icon size-xs logo__modal">SkyFactory</span>
+                                    </div>
+                                    <!-- ./modal-aside -->
+
+                                    <div class="auth__main modal__form">
+                                        <div class="modal__regist">
+                                            <div class="modal__auth-header">Зарегистрируйтесь</div>
+                                            <div class="modal__auth-subheader">или войдите в <a href="Catalog_page2.html#openModal" class="modal__auth-link">личный кабинет</a></div>
+                                            <form action="#">
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input class="input-field" name="first-name" value="" placeholder="Имя">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input class="input-field" name="first-name" value="" placeholder="Фамилия">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input class="input-field" name="first-name" value="" placeholder="E-mail">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input class="input-field" name="first-name" value="+7(___)___-__-__">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <button class="btn1 btn-md btn-base-brand-1 btn-text-size-lg js-button-reg" onclick="personal_account()">Зарегистрироваться</button>
+    
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Конец блока модального окна -->
+
+                    </li>
+
+                    <li class="nav__item">
+                        <button class="cart" id="cart">
+                            <img class="cart__image" src="img/shopping_cart.svg" alt="Cart" />
+                            <div class="cart__num" id="cart_num">0</div>
+                        </button>
+                        <!-- <a href="#" class="nav__link">Корзина</a> -->
+                    </li>
+
+                </ul>
+            </nav>
+            
+        </div>
+        <!-- /.navbar -->
+    </header>
+    <!-- /.header -->
+
+    <!--
+        Основной раздел сайта (каталог товаров)
+    -->
+    <div class="main">
+        <div class="page container">
+            <div class="sidebar hidden-xs f1">
+                <div class="sidebar-nav margin-bottom-20">
+                    <div class="sidebar-nav-header1 h4">
+                        <a class="no-unline p26">Каталог товаров</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Товары со скидкой</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Телескопы</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Sky-Wather</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Celestron</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Orion</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">GSO</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Levenhuk</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Discovery</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Meade</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Bresser</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Veber</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Coronado</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Как выбрать телескоп?</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Окуляры</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Линзы Барлоу</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Светофильтры</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Аксессуары</a>
+                    </div>
+                </div>
+                 <!--./sidebar  -->
+
+                <div class="subpage_nav">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="Main_page.html" title="Главная">
+                            <span>Главная</span>
+                        </a></li>
+                        <li><a href="#" title="Телескопы" class="last__nav">
+                            <span>Телескопы</span>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="main__catalog">
+                    <h1 class="name-category">Телескопы</h1>
+                    <div class="content">
+                        <!-- Фильтр сортировки -->
+                        <div class="subcategories">
+                            <a href="#" class="btn btn-link">Sky-Wather</a>
+                            <a href="#" class="btn btn-link">Celestron</a>
+                            <a href="#" class="btn btn-link">Orion</a>
+                            <a href="#" class="btn btn-link">GSO</a>
+                            <a href="#" class="btn btn-link">Levenhuk</a>
+                            <a href="#" class="btn btn-link">Discovery</a>
+                            <a href="#" class="btn btn-link">Meade</a>
+                            <a href="#" class="btn btn-link">Svbony</a>
+                            <a href="#" class="btn btn-link">Veber</a>
+                            <a href="#" class="btn btn-link">Coronado</a>
+                            <a href="#" class="btn btn-link">Unistellar</a>
+                            <a href="#" class="btn btn-link">Vixen</a>
+                        </div>
+                        <!-- ./subcategories -->
+                        <div id="product-list">
+                            <div class="sorting-view">
+                                <!-- Сортировка -->
+                                <div class="product-sorting">
+                                    Сортировать: 
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle" aria-expanded="false">
+                                            Цена
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" data-number="Название" rel="nofollow">Название</a></li>
+                                            <li><a href="#" data-number="Хиты_продаж" rel="nofollow">Хиты продаж</a></li>
+                                            <li><a href="#" data-number="В_наличии" rel="nofollow">В наличии</a></li>
+                                            <li class="active"><a href="#" rel="nofollow">Цена</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="product-count">
+                                        Выводить по: 
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" aria-expanded="false">
+                                                Все
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" data-number="8" rel="nofollow">8</a></li>
+                                                <li><a href="#" data-number="16" rel="nofollow">16</a></li>
+                                                <li><a href="#" data-number="32" rel="nofollow">32</a></li>
+                                                <li><a href="#" data-number="64" rel="nofollow">64</a></li>
+                                                <li class="active"><a href="Catalog_page.html" rel="nofollow">Все</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ./pull-right -->
+                            </div>
+                            <!-- ./sorting-view -->
+                            <ul class="cart-items cart-list thumbs clearfix">
+                                <div class="cards">
+
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart1.jpg" alt="Телескоп Veber 360/50 рефрактор в кейсе" title="Телескоп Veber 360/50 рефрактор в кейсе" />
+                                            </a>
+                                            <div class="card__label">-6%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">3 840.0</div>
+                                                <div class="card__price card__price--common">4 339.0</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп Veber 360/50 рефрактор в кейсе</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Первый товар -->
+                                    
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart2.jpg" alt="Телескоп SVBONY SV502" title="Телескоп SVBONY SV502" />
+                                            </a>
+                                            <div class="card__label">-5%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">4 650.0</div>
+                                                <div class="card__price card__price--common">5 550.0</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп SVBONY <br> SV502</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Второй товар -->
+
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart3.jpg" alt="Телескоп Veber 350x60 Аз рефрактор" title="Телескоп Veber 350x60 Аз рефрактор" />
+                                            </a>
+                                            <div class="card__label">-17%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">6 030.0</div>
+                                                <div class="card__price card__price--common">7 296.0</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп Veber 350x60 Аз рефрактор</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Третий товар -->
+
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart4.jpg" alt="Телескоп Veber УМКА 76/300 рефлектор" title="Телескоп Veber УМКА 76/300 рефлектор" />
+                                            </a>
+                                            <div class="card__label">-14%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">6 560.0</div>
+                                                <div class="card__price card__price--common">7 610.0</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп Veber УМКА 76/300 рефлектор</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Четвёртый товар -->
+
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart5.jpg" alt="Телескоп портативный SVBONY 70400 в рюкзаке" title="Телескоп портативный SVBONY 70400 в рюкзаке" />
+                                            </a>
+                                            <div class="card__label">-22%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">9 990.0</div>
+                                                <div class="card__price card__price--common">12 887</div>
+                                            </div>
+                                            <a href="Cart_page.html" class="card__title">Телескоп портативный SVBONY 70400 в рюкзаке</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Пятый товар -->
+                                    
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart6.jpg" alt="Телескоп Celestron PowerSeeker 76 AZ" title="Телескоп Celestron PowerSeeker 76 AZ" />
+                                            </a>
+                                            <div class="card__label">-12%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">15 040</div>
+                                                <div class="card__price card__price--common">17 380</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп Celestron PowerSeeker 76 AZ</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Шестой товар -->
+                                    
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart8.jpg" alt="Телескоп Levenhuk Skyline PLUS 80S" title="Телескоп Levenhuk Skyline PLUS 80S" />
+                                            </a>
+                                            <div class="card__label">-11%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">22 990</div>
+                                                <div class="card__price card__price--common">25 749</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп Levenhuk Skyline PLUS 80S</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Седьмой товар -->
+
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a href="Cart_page.html" class="card__image">
+                                                <img src="img/Products/cart9.jpg" alt="Телескоп Discovery Spark 809 EQ" title="Телескоп Discovery Spark 809 EQ" />
+                                            </a>
+                                            <div class="card__label">-1%</div>
+                                        </div>
+                                        <div class="card__bottom">
+                                            <div class="card__prices">
+                                                <div class="card__price card__price--discount">29 990</div>
+                                                <div class="card__price card__price--common">30 290</div>
+                                            </div>
+                                            <a href="#" class="card__title">Телескоп Discovery Spark 809 EQ</a>
+                                            <button class="card__add">
+                                                В корзину
+                                                <i class="simbol"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Восьмой товар -->
+
+                                </div>
+                                <!-- ./cards -->
+                            </ul>
+                            <!-- ./ul -->
+
+                            <!--
+                                Выпадающее меню (модальное окно с корзиной)
+                            -->
+                            <div class="popup">
+                                <div class="popup__container" id="popup_container">
+                                    <div class="popup__item">
+                                        <h1 class="popup__title">Оформление заказа</h1>
+                                    </div>
+                                    <div class="popup__item" id="popup_product_list">
+                                        <div class="popup__product">
+                                            <div class="popup__product-wrap">
+                                                <img src="img/Products/cart1.jpg" alt="Телескоп Veber 360/50 рефрактор в кейсе" class="popup__product-image"/>
+                                                <h2 class="popup__product-title">Телескоп Veber 360/50 рефрактор в кейсе</h2>
+                                            </div>
+                                            <div class="popup__product-wrap">
+                                                <div class="popup__product-price">3 840</div>
+                                                <button class="popup__product-delete"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popup__item">
+                                        <div class="popup__cost">
+                                            <h2 class="popup__cost-title">Итого</h2>
+                                            <output class="popup__cost-value" id="popup_cost">3 840</output>
+                                        </div>
+                                    <div class="popup__cost">
+                                        <h2 class="popup__cost-title">Скидка</h2>
+                                        <output class="popup__cost-value" id="popup_discount">0</output>
+                                    </div>
+                                    <div class="popup__cost">
+                                        <h2 class="popup__cost-title">Итого со скидкой</h2>
+                                        <output class="popup__cost-value" id="popup_cost_discount">3 840</output>
+                                    </div>
+                                    <div class="popup__cost">
+                                        <button type="submit" class="theme-background">
+                                            Оформить заказ
+                                            <i class="simbol"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button class="popup__close" id="popup_close">X</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--
+                            Навигация на другие страницы каталога
+                        -->
+                        <div class="page-nav items_pager">
+                            <ul class="page-nav__list">
+                                <li class="page-nav__item page-nav__item--active">
+                                    <span class="page-nav__link">1</span>
+                                </li>
+                                <li class="page-nav__item">
+                                    <a href="#" class="page-nav__link">2</a>
+                                </li>
+                                <li class="page-nav__item">
+                                    <a href="#" class="page-nav__link">3</a>
+                                </li>
+                                <li class="page-nav__item">
+                                    <a href="#" class="page-nav__link">4</a>
+                                </li>
+                                <li class="page-nav__item">
+                                    <a href="#" class="page-nav__link">5</a>
+                                </li>
+                            </ul>
+                            <p class="page-nav__total total_count">всего 121 товар</p>
+                        </div>
+                        <!-- ./page-nav items_pager -->
+                    </div>
+                </div>
+            </div>
+            <!-- ./sidebar -->
+        </div>
+    </div>
+    <!-- /.main -->
+
+    <!--
+        Подвал сайта
+    -->
+    <footer class="footer4 col-12">
+        <div class="container navbar">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <a href="Main_page.html" class="logo-link1">
+                <p class="logo__text">SkyFactory</p>
+            </a>
+            <!-- <p class="logo__text">SkyFactory</p> -->
+
+            <div class="footer__section4">         
+                <div class="footer-column4">Популярные разделы</div>
+                <ul class="list-unstyled4 simple-list4">
+                    <li><a href="#" class="footer_link4">Телескопы Sky-Watcher</a></li>
+                    <li><a href="#" class="footer_link4">Телескоп рефлектор (зеркальные)</a></li>
+                </ul>
+            </div>
+            <div class="footer__section4">         
+                <div class="footer-column4">Контакты интернет-магазина</div>
+                <ul class="list-unstyled4 simple-list4">
+                    <li><a href="#" class="footer_link4">+7(999) 887 37 50</a></li>
+                    <li><a href="#" class="footer_link4">8(999) 887 37 50</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ./footer -->
+    <script src="JS/main.js"></script>
+</body>
+</html>

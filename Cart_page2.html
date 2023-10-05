@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с товаром SkyFactory</title>
+    <link rel="stylesheet" href="CSS/cart_page.css">
+    <link rel="stylesheet" href="CSS/home_page.css">
+    <link rel="stylesheet" href="CSS/catalog_page.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/personal_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Шапка сайта
+    -->
+    <header class="header col-12">
+        <div class="navbar container">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--
+                        Бургер меню (выпадающее меню)
+                    -->
+                    <li class="nav__item">
+                        <button class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <p class="text__menu">Меню</p>
+                                <span></span>
+                            </label>
+                            
+                            <ul class="menu__box">
+                              <li><a class="menu__item" href="Main_page.html">Главная</a></li>
+                              <li><a class="menu__item" href="Catalog_page.html">Каталог товаров</a></li>
+                              <li><a class="menu__item" href="Reviews_page.html">Отзывы</a></li>
+                              <li><a class="menu__item" href="Contact_page.html">Контакты</a></li>
+                              <li><a class="menu__item" href="About__page.html">О SkyFactory</a></li>
+                            </ul>
+                        </button>
+                    </li>
+
+                    <li class="nav__item"><a href="#" class="nav__link">
+                        <div class="form__search">
+                            <form action="#" method="get">
+                                <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value="" autocomplete="off">
+                            </form>
+                        </div>
+                    </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/account.svg" alt="">
+                        <a href="#openModal" class="nav__link">Личный кабинет</a>
+
+                        <!-- Модальное окно -->
+                        <div class="modalDialog" id="openModal">
+                            <div class="container">
+                                <a href="#close" title="Закрыть" class="close">X</a>
+                                <div class="modal-author">
+
+                                    <div class="modal-aside">
+                                        <span class="icon size-xs logo__modal">SkyFactory</span>
+                                    </div>
+                                    <!-- ./modal-aside -->
+
+                                    <div class="auth__main modal__form">
+                                        <div class="modal__regist">
+                                            <div class="modal__auth-header">Войдите в личный кабинет</div>
+                                            <div class="modal__auth-subheader">или <a href="Cart_page.html#openModal" class="modal__auth-link">зарегистрируйтесь</a></div>
+                                            <form action="#">
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input class="input-field" name="first-name" value="" placeholder="E-mail">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input type="password" class="input-field" name="first-name" value="" placeholder="Пароль">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <button class="btn1 btn-md btn-base-brand-1 btn-text-size-lg js-button-log" onclick="personal_account_log()">Войти</button>
+    
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Конец блока модального окна -->
+
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/shopping_cart.svg" alt="">
+                        <a href="Basket_page.html" class="nav__link">Корзина</a>
+                    </li>
+
+                </ul>
+            </nav>
+            
+        </div>
+        <!-- /.navbar -->
+    </header>
+    <!-- /.header -->
+
+    <div class="main">
+        <div class="page container">
+            <div class="sidebar hidden-xs f1">
+
+                <div class="subpage_nav">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="Main_page.html" title="Главная">
+                            <span>Главная</span>
+                        </a></li>
+                        <li><a href="Catalog_page.html" title="Каталог товаров">
+                            <span>Каталог товаров</span>
+                        </a></li>
+                        <li><a href="#" title="Телескопы">
+                            <span>Телескопы</span>
+                        </a></li>
+                        <li><a href="#" title="Телескопы Sky-Watcher" class="last__nav">
+                            <span>Телескопы Sky-Watcher</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <!-- ./subpage_nav -->
+
+                <!--
+                    Основной раздел сайта с товаром
+                -->
+                <div class="page__top container">
+                    <h1 class="page__title">Телескоп Sky-Watcher BK 707AZ2</h1>
+                </div>
+                <div class="product-card container">
+                    <div class="product-card__image-main">
+                        <a class="link_toCard_one product-card__image-main-link" title="Телескоп Sky-Watcher BK 707AZ2">
+                            <img src="img/Product_card/card1.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" title="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image-main-img">
+                        </a>
+                        <ul class="product-card__image-list">
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard1.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard2.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard3.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard4.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard5.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard6.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard7.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                            <li class="product-card__image-item">
+                                <a href="#" class="link_toCard product-card__image-link">
+                                    <img src="img/Product_card/subcard8.jpg" alt="Телескоп Sky-Watcher BK 707AZ2" class="product-card__image lazyloaded" data-loaded="true">
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- ./ul-item__card -->
+                    </div>
+                    <!-- ./product-card__image-main -->
+
+                    <div class="product-card__middle">
+                        <div class="warranty product-card__warranty icon icon-warranty">Гарантия производителя 3 года</div>
+                        <div class="product__characterlist">
+                            <div class="product-card__characteristics-row">
+                                <div class="product-card__characteristics-key">
+                                    <div class="product-card__characteristics-name">Тип телескопа</div>
+                                    <div class="product-card__characteristics-dots"></div>
+                                </div>
+                                <div class="product-card__characteristics-value">рефрактор</div>
+                            </div>
+
+                            <div class="product-card__characteristics-row">
+                                <div class="product-card__characteristics-key">
+                                    <div class="product-card__characteristics-name">Монтировка</div>
+                                    <div class="product-card__characteristics-dots"></div>
+                                </div>
+                                <div class="product-card__characteristics-value">азимутальная</div>
+                            </div>
+
+                            <div class="product-card__characteristics-row">
+                                <div class="product-card__characteristics-key">
+                                    <div class="product-card__characteristics-name">Управление</div>
+                                    <div class="product-card__characteristics-dots"></div>
+                                </div>
+                                <div class="product-card__characteristics-value">механическое</div>
+                            </div>
+
+                            <div class="product-card__characteristics-row">
+                                <div class="product-card__characteristics-key">
+                                    <div class="product-card__characteristics-name">Линза Барлоу в комплекте</div>
+                                    <div class="product-card__characteristics-dots"></div>
+                                </div>
+                                <div class="product-card__characteristics-value">Да</div>
+                            </div>
+
+                            <div class="product-card__characteristics-row">
+                                <div class="product-card__characteristics-key">
+                                    <div class="product-card__characteristics-name">Сумка или чехол в комплекте</div>
+                                    <div class="product-card__characteristics-dots"></div>
+                                </div>
+                                <div class="product-card__characteristics-value">Нет</div>
+                            </div>
+                        </div>
+                        <!-- ./characterlist -->
+
+                        <div class="product-card__disclamer">
+                            Внешний вид и цвет товара может отличаться
+                            от представленного на фотографии.
+                        </div>
+
+                        <div class="product-card__specifications">
+                            <div class="product-card__specifications-item">
+                                <a class="product-card__specifications-link" href="#characters" target="_blank">Все характеристики</a>
+                            </div>
+                            <div class="product-card__specifications-item">
+                                <a class="product-card__specifications-link" href="#full_description" target="_blank">Описание</a>
+                            </div>
+                            <div class="product-card__specifications-item">
+                                <a class="product-card__specifications-link" href="#insturstions" target="_blank">Инструкция</a>
+                            </div>
+                        </div>
+                        <!-- ./specifications -->
+                        &nbsp;
+                    </div>
+                    <!-- ./product-card__middle -->
+
+                    <div class="product-card__description">
+                        <div class="product-card__price">
+                            <div class="product-card__price-wrap">
+                                <div class="product-card__prices">
+
+                                    <div class="product-card__prices-wrap">
+                                        <div class="product-card__old-price">29 797 ₽</div>
+                                        <div class="product-card__price">
+                                            <!-- Цена кэш-бокса начального фрейма -->
+                                            27 590 ₽
+                                            <div class="plumbs-tile plumbs-tile--line">
+                                                <div class="plumbs-tile__item discount">–7%</div>
+                                            </div>
+                                            <!-- Цена кэш-бокса конечного фрейма -->
+                                        </div>
+                                    </div>
+                                    <!-- ./product-card__prices -->
+
+                                    <div class="product-card__city-wrap">
+                                        <!-- Информация о городе кэша начального кадра -->
+                                        <span class="product-card__city icon icon-map-marker">Выберите город</span>
+                                        <!-- Информация о городе кэша конечного кадра -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./product-card__price -->
+
+                        <div class="product-card__buys">
+                            <form action="#" method="post">
+                                <button class="product-card__button btn-lg btn-addon btn-base-brand-1 icon icon-add-basket">
+                                    Добавить в корзину
+                                </button>
+                            </form>
+                            <!-- ./form -->
+                        </div>
+                    </div>
+                    <!-- ./product-card__description -->
+                </div>
+                <!-- ./product-card -->
+            </div>
+            <div class="tabs-nav">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__item tabs-nav__item--active">
+                        <a class="tabs-nav__link" href="#full_description">Описание</a>
+                    </li>
+
+                    <li class="tabs-nav__item">
+                        <a class="tabs-nav__link" href="#specifications">Характеристики</a>
+                    </li>
+
+                    <li class="tabs-nav__item">
+                        <a class="tabs-nav__link" href="#reviews">Отзывы</a>
+                    </li>
+
+                    <li class="tabs-nav__item">
+                        <a class="tabs-nav__link" href="#question_and_answer">Вопрос-ответ</a>
+                    </li>
+
+                    <li class="tabs-nav__item">
+                        <a class="tabs-nav__link" href="#overviews">Обзоры</a>
+                    </li>
+                </ul>
+                <!-- ./ul-tabs-nav__list -->
+
+                <div class="tab-container product-tab">
+                    <div class="tabs-content__item">
+                        <div class="static-text static-text-lg">
+                            <h2>Телескоп Sky-Watcher BK 707AZ2 – прекрасный подарок для начинающих астрономов</h2>
+                            <p>
+                                Прибор станет полезным и удобным проводников по космическим просторам для тех, кто делает свои первые шаги в изучении небесных светил. С его помощью можно рассматривать кратеры на Луне, различить многочисленные спутники Юпитера, насладиться незабываемым видом колец Сатурна. Модель представляет собой ахроматический рефлектор. Он предназначен для изучения основ астрономии на начальном уровне и вызывает восторг и увлечение у детей. Благодаря своей доступной цене рефлектор относится к бюджетному сегменту, но его нельзя считать просто игрушкой для наблюдений за звездным небом.
+                            </p>
+                            <img src="img/img_card/img_card1.jpg" alt="Телескоп" class="img__card-tabs">
+
+                            <h2>Улучшенная оптика телескопа Sky-Watcher BK 707AZ2</h2>
+                            <p>
+                                В комплект оптики входят два просветленных окуляра Super на 10 и 25 мм. Они позволяют добиться 28 кратного и 70-ти кратного увеличения соответственно. А применение линзы Барлоу дает возможность увеличить эти значения в два раза. При использовании диагонального зеркала эта линза может быть установлена перед ним, и тогда увеличение телескопа возрастет в 3 раза. Достигается высокая детализация изображения, так как хроматические аберрации минимальные. Объектив диаметром 7 см собирает света на 36 % больше чем аналог, имеющий объектив 60 мм. На линзах имеется просветляющее покрытие, состоящее из нескольких слоев.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./tab-container -->
+            </div>
+        </div>
+    </div>
+
+    <!--
+        Подвал сайта
+    -->
+    <footer class="footer2 col-12">
+        <div class="container navbar">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <a href="Main_page.html" class="logo-link1">
+                <p class="logo__text">SkyFactory</p>
+            </a>
+            <!-- <p class="logo__text">SkyFactory</p> -->
+
+            <div class="footer__section2">         
+                <div class="footer-column2">Популярные разделы</div>
+                <ul class="list-unstyled2 simple-list2">
+                    <li><a href="#" class="footer_link2">Телескопы Sky-Watcher</a></li>
+                    <li><a href="#" class="footer_link2">Телескоп рефлектор (зеркальные)</a></li>
+                </ul>
+            </div>
+            <div class="footer__section2">         
+                <div class="footer-column2">Контакты интернет-магазина</div>
+                <ul class="list-unstyled2 simple-list2">
+                    <li><a href="#" class="footer_link2">+7(999) 887 37 50</a></li>
+                    <li><a href="#" class="footer_link2">8(999) 887 37 50</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ./footer -->
+
+    <script src="JS/main.js"></script>
+</body>
+</html>

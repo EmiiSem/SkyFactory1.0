@@ -1,0 +1,450 @@
+.subpage_nav {
+    margin-top: -2px;
+    margin-left: 14px;
+}
+
+.breadcrumb-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.breadcrumb-nav li:first-child {
+    padding-left: 0;
+    background: none;
+}
+
+.breadcrumb-nav li {
+    color: #9a9997;
+    font-weight: 500;
+    font-size: 15px;
+    background: url("../img/arrow.svg") no-repeat 0.25rem 0.125rem/0.375rem;
+    padding-left: 1rem;
+    display: inline;
+}
+
+a.last__nav {
+    pointer-events: none; /* ссылка некликабельная */
+    cursor: default; /* установка курсора в виде стрелки(по умолчанию) */
+    color: #999; 
+    font-weight: 600;
+}
+
+.breadcrumb-nav a {
+    color: black;
+} /* Меню с ссылками */
+
+
+.main__catalog {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.name-category {
+    font-size: 26px;
+    line-height: 1.2em;
+    color: #005F73;
+    font-weight: 700;
+    margin-left: -156px;
+    margin-top: 45px;
+}
+
+.content {
+    padding: 0;
+    margin-left: -24%;
+}
+
+.subcategories {
+    margin-left: 50px;
+    padding-left: 25px;
+    border-bottom: 1px dashed #000;
+}
+
+.sorting-view {
+    border-bottom: 1px dashed #000;
+    border-top: 1px dashed #000;
+    padding: 10px 10px 10px 0;
+    margin-top: -1px;
+}
+
+.product-sorting {
+    font-size: 14px;
+    margin-left: 92px;
+    display: inline-block;
+}
+
+.pull-right {
+    border-radius: 0;
+    float: right;
+}
+
+.product-count {
+    display: inline-block;
+}
+
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
+
+.sorting-view .btn-default {
+    font-size: 14px;
+    display: inline-block;
+    border-color: black;
+}
+
+.btn-group>.btn, .btn-group-vertical>.btn {
+    position: relative;
+    float: left;
+}
+
+.sorting-view .btn .caret {
+    margin-left: 50px;
+}
+
+.content ul.cart-items {
+    padding-top: 20px;
+}
+
+ul.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}  /* Сортировка */
+
+.cartsItem {
+    border: 1px solid rgba(0, 0, 0, 0%);
+    padding: 5px;
+}
+
+ul.cart-items .cart-img {
+    display: block;
+}
+
+.image__cart {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    display: block\9;
+}
+
+ul.cart-items li .image {
+    width: 190px;
+    height: 190px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ul.cart-items li .h5 {
+    height: 56px;
+}
+
+.ul.cart-items li .h5 {
+    color: #4e4e4e;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 18px;
+    margin: 0 0 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul.cart-items li .rating-list {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+ul.cart-items li .cart-prices {
+    margin-bottom: 12px;
+}
+
+ul.cart-items li .price {
+    font-weight: 700;
+}
+
+.similar {
+    line-height: normal;
+}
+
+ul.cart-items li button i {
+    margin-left: 10px;
+}
+
+.simbol::before {
+    content: "\27A4";
+}
+
+.theme-background {
+    background-color: #0A9396;
+    border-radius: 5px;
+    color: white;
+    width: 186px;
+    height: 38px;
+    border: none;
+}
+
+ul.cart-items li {
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 0 48px;
+    padding-left: 25px;
+    position: relative;
+} /* Список товаров */
+
+.page-nav, .page-nav__list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-nav {
+    margin-left: 7.3rem;
+    margin-top: 2.3rem;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.page-nav__list {
+    margin-top: 1.25rem;
+    gap: 0.375rem;
+}
+
+.page-nav__total {
+    margin-left: 2.125rem;
+    margin-top: 0.25rem;
+    color: #747270;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.page-nav__item {
+    list-style: none;
+}
+
+.page-nav__item--active .page-nav__link {
+    color: #fff;
+    background: #353433;
+    cursor: pointer;
+}
+
+.page-nav__link {
+    padding: 0;
+    color: #353433;
+    border-radius: 0.5625rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.cart {
+    margin-top: -36px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #005F73;
+    transition: 0.1s;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Увеличиваем кнопку при наведении на нее */
+.cart:hover {
+    transform: scale(1.1);
+}
+
+/* Стилизуем счетчик товаров */
+.cart__num {
+    position: absolute;
+    background-color: #0A9396;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    top: -5px;
+    right: -5px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.33); /* Небольшое затемнение на фоне */
+    z-index: 1000; /* Поверх всех окон */
+    width: 100%;
+    height: 100%;
+    display: none; /* По умолчанию скрываем окно */
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    overflow-y: scroll;
+}
+  
+/* Стилизация контейнера окна */
+.popup__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяем элементы внутри равномерно */
+    width: 100%;
+    max-width: 800px;
+    min-height: 300px;
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    position: relative;
+}
+  
+/* Элементы окна (заголовок, список товаров, вывод стоимости) */
+.popup__item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+  
+.popup__item:last-of-type {
+    border-bottom: none;
+}
+  
+.popup__title {
+    font-size: 20px;
+}
+  
+/* Стили для вывода товара */
+.popup__product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+  
+.popup__product-wrap {
+    display: flex;
+    align-items: center;
+}
+  
+.popup__product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+  
+.popup__product-title {
+    max-width: 300px;
+    font-weight: 500;
+}
+  
+.popup__product-price {
+    font-size: 18px;
+    margin-right: 15px;
+}
+  
+/* Стили для кнопки удаления товара */
+.popup__product-delete {
+    border: none;
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: #d62240;
+}
+  
+/* Стили для вывода стоимости товаров */
+.popup__cost {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+  
+  .popup__cost-title {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #364364;
+    text-align: right;
+  }
+  
+.popup__cost-value {
+    font-size: 20px;
+}
+  
+/* Стили для кнопки закрытия окна */
+.popup__close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    border: none;
+    color: rgba(54, 67, 100, 0.7);
+    font-size: 20px;
+}
+  
+.popup__close:hover {
+    color: rgb(54, 67, 100);
+}
+  
+.popup--open {
+    display: flex;
+}
+
+.footer4 {
+    background-color: #353433;
+    width: 100%;
+    height: 200px;
+    margin-top: 200px;
+    padding: 35px 0 50px;
+    border-top: 2px solid #0A9396;
+}
+
+.logo__text4 {
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    margin-left: -30px;
+}
+
+.footer4 .footer-column4 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.list-unstyled4 {
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.footer_link4 {
+    color: white;
+    margin-top: 10px;
+}
+
+.logo-link1 img {
+    display: block;
+    width: 100px;
+    /* margin: 0 20%; */
+} /* Подвал страницы */

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyFactory</title>
+    <link rel="stylesheet" href="CSS/home_page.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/personal_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Шапка сайта
+    -->
+    <header class="header col-12">
+        <div class="navbar container">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--
+                        Бургер меню (выпадающее меню)
+                    -->
+                    <li class="nav__item">
+                        <button class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <p class="text__menu">Меню</p>
+                                <span></span>
+                            </label>
+                            
+                            <ul class="menu__box">
+                              <li><a class="menu__item" href="Main_page.html">Главная</a></li>
+                              <li><a class="menu__item" href="Catalog_page.html">Каталог товаров</a></li>
+                              <li><a class="menu__item" href="Reviews_page.html">Отзывы</a></li>
+                              <li><a class="menu__item" href="Contact_page.html">Контакты</a></li>
+                              <li><a class="menu__item" href="About__page.html">О SkyFactory</a></li>
+                            </ul>
+                        </button>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                        <div class="form__search">
+                            <form action="#" method="get">
+                                <input type="text" class="text__search" name="ser" placeholder="Поиск товара..." value="" autocomplete="off">
+                            </form>
+                        </div>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/account.svg" alt="">
+                        <a href="#openModal" class="nav__link">Личный кабинет</a>
+
+                        <!-- Модальное окно -->
+                        <div class="modalDialog" id="openModal">
+                            <div class="container">
+                                <a href="#close" title="Закрыть" class="close">X</a>
+                                <div class="modal-author">
+
+                                    <div class="modal-aside">
+                                        <span class="icon size-xs logo__modal">SkyFactory</span>
+                                    </div>
+                                    <!-- ./modal-aside -->
+
+                                    <div class="auth__main modal__form">
+                                        <div class="modal__regist">
+                                            <div class="modal__auth-header">Войдите в личный кабинет</div>
+                                            <div class="modal__auth-subheader">или <a href="Main_page.html#openModal" class="modal__auth-link">зарегистрируйтесь</a></div>
+                                            <form action="#">
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input class="input-field" name="first-name" value="" placeholder="E-mail">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <div class="input-outer modal__form-input">
+                                                    <div class="input-wrapper input-wrapper-md">
+                                                        <input type="password" class="input-field" name="first-name" value="" placeholder="Пароль">
+                                                        <label class="input-label input-label-hide"></label>
+                                                    </div>
+                                                    <!-- ./input-wrapper -->
+    
+                                                    <p class="input-message"></p>
+                                                </div>
+    
+                                                <button class="btn1 btn-md btn-base-brand-1 btn-text-size-lg js-button-log" onclick="personal_account_log()">Войти</button>
+    
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Конец блока модального окна -->
+
+                    </li>
+
+                    <li class="nav__item">
+                        <img src="img/shopping_cart.svg" alt="">
+                        <a href="Basket_page.html" class="nav__link">Корзина</a>
+                    </li>
+
+                </ul>
+            </nav>
+            
+        </div>
+        <!-- /.navbar -->
+    </header>
+    <!-- /.header -->
+
+
+    <!--
+        Основной раздел сайта
+    -->
+    <div class="main">
+        <div class="page container">
+            <div class="sidebar hidden-xs f1">
+                <div class="sidebar-nav margin-bottom-20">
+                    <div class="sidebar-nav-header1 h4">
+                        <a class="no-unline p26">Каталог товаров</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Товары со скидкой</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Телескопы</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Sky-Wather</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Celestron</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Orion</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">GSO</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Levenhuk</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Discovery</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Meade</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Bresser</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Veber</a>
+                    </div>
+                    <div class="sidebar-nav-header h4">
+                        <a class="no-unline p20">Coronado</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Как выбрать телескоп?</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Окуляры</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Линзы Барлоу</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Светофильтры</a>
+                    </div>
+                    <div class="sidebar-nav-header h4 background-white">
+                        <a class="no-unline-white p20">Аксессуары</a>
+                    </div>
+                </div>
+
+                <!--
+                    Слайдер баннеров главной страницы
+                -->
+                <div class="carousel">
+                    <div class="carousel-window">
+                        <div class="slider">
+                            <div class="slider__item">
+                                <img src="img/banner.png" alt="Баннер_страницы" class="banner__slider">
+                                <div class="text__banner">
+                                    <p class="bold">Телескоп SKY-
+                                        WATHER BK
+                                        707AZ2
+                                    </p>
+                                    <p class="size">Телескоп Sky-Watcher BK 707AZ2 от
+                                        компании Sky-Watcher представляет
+                                        собой ахроматический рефрактор
+                                        начального уровня. Данная...
+                                    </p>
+                                    <button class="button__item">ПОДРОБНЕЕ</button>
+                                    <img src="img/main_telecope.png" alt="Баннерный телескоп" class="telescope__item-banner">
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/banner2.png" alt="Баннер_скидок" class="banner__slider">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="carousel-prev">
+                        <span class="carousel-prev-icon">&lt;</span>
+                    </a>
+                    <a href="#" class="carousel-next">
+                        <span class="carousel-next-icon">&gt;</span>
+                    </a>
+                </div>
+                <!-- /.slider -->
+            </div>
+            <!-- ./sidebar -->
+
+            <!--
+                Новости магазина
+            -->
+            <div class="news-magazine">
+                <span class="text__news">Новости об интернет-магазине</span>
+            </div>
+            <div class="news-magazine_subtext">
+                <span class="subtext__news">
+                    Мы рады приветствовать Вас в нашем<br> специализированном магазине <br>телескопов и других астрономических товаров.<br>
+                    Здесь Вы найдете широчайший выбор телескопов,<br> и принадлежностей к ним, литературы и<br> других сопутствующих товаров, а также получите<br>
+                    исчерпывающие и авторитетные консультации<br> по любым вопросам,<br> связанным с астрономией, которые дадут<br>
+                    Вам наши консультанты,<br> каждый из которых имеет солидный<br> опыт занятий астрономией.<br>
+                    <br>
+                    Интерес к звёздам и к созерцанию неба<br> обычно приводит человека к желанию<br> купить телескоп, который позволит ему<br> увидеть
+                    своими глазами все далёкие<br> сокровища космоса, так красочно описываемые<br> в книгах.
+                    В телескоп вашему взору откроются Луна,<br> планеты, кометы,<br> многочисленные звёздные скопления, туманности
+                    <br>и галактики, которые с давних<br> времён привлекали к себе внимание.
+                </span>
+            </div>
+
+            <!--
+                Популярные товары
+            -->
+            <div class="popular__cart">
+                <span class="popular__text">Популярные товары</span>
+            </div>
+            <div class="popular__cart-img">
+                <div class="popular-item">
+                    <img src="img/main_img/tel1.png" alt="Первый телескоп Unistellar" class="img">
+                    <p class="popular__subtitle">
+                        Цифровой телескоп
+                    Unistellar eVscope eQuinox
+                    </p>
+                </div>
+                <div class="popular-item">
+                    <img src="img/main_img/tel2.png" alt="Второй телескоп SVBONY" class="img">
+                    <p class="popular__subtitle">
+                        Телескоп SVBONY
+                        SV501P 60/400 мм
+                    </p>
+                </div>
+                <div class="popular-item">
+                    <img src="img/main_img/tel3.png" alt="Третий телескоп Meade" class="img">
+                    <p class="popular__subtitle">
+                        Телескоп Meade
+                        Infinity 70 мм
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.main -->
+
+    <!--
+        Подвал сайта
+    -->
+    <footer class="footer col-12">
+        <div class="container navbar">
+            <a href="Main_page.html" class="logo-link">
+                <img src="img/logo.svg" alt="SkyFactory"> <!-- Логотип -->
+            </a>
+            <a href="Main_page.html" class="logo-link1">
+                <p class="logo__text">SkyFactory</p>
+            </a>
+            <!-- <p class="logo__text">SkyFactory</p> -->
+
+            <div class="footer__section">         
+                <div class="footer-column">Популярные разделы</div>
+                <ul class="list-unstyled simple-list">
+                    <li><a href="#" class="footer_link">Телескопы Sky-Watcher</a></li>
+                    <li><a href="#" class="footer_link">Телескоп рефлектор (зеркальные)</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">         
+                <div class="footer-column">Контакты интернет-магазина</div>
+                <ul class="list-unstyled simple-list">
+                    <li><a href="#" class="footer_link">+7(999) 887 37 50</a></li>
+                    <li><a href="#" class="footer_link">8(999) 887 37 50</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <script src="JS/sliders.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        new Slider(document.querySelector('.carousel'));
+    });
+    </script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
